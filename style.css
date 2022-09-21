@@ -1,0 +1,32 @@
+body {
+  margin: 0 auto;
+  font-family: 'Comfortaa', sans-serif;
+  max-width: 1600px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 200%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.main-container {
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  text-align: center;
+}
+
+.main-container > * {
+  border: 1px solid black;
+}
+
+.search_container {
+  margin-left: auto;
+  padding-right: 40px;
+  margin-top: 40px;
+  width: max-content;
+}
+
