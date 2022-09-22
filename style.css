@@ -1,3 +1,7 @@
+html {
+  width: fit-content;
+}
+
 body {
   margin: 0 auto;
   font-family: 'Comfortaa', sans-serif;
@@ -19,6 +23,7 @@ h1 {
   grid-template-rows: repeat(5, 1fr);
   row-gap: 20px;
   text-align: center;
+  font-size: 0.8rem;
 }
 
 .main-container > div {
@@ -27,9 +32,23 @@ h1 {
   align-items: center;
 }
 
-.title {
+.row-1{
   background-color: rgb(217, 30, 50, 0.5);
   color: white;
+  font-weight: 700;
+}
+
+.row-1:hover {
+  cursor: pointer;
+  background-color: rgb(217, 30, 50, 0.8);
+}
+
+.row-2:hover, 
+.row-3:hover,
+.row-4:hover,
+.row-5:hover {
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.2);
   font-weight: 700;
 }
 
@@ -69,25 +88,85 @@ h1 {
   grid-row: 5/6;
 }
 
-.search_container {
-  margin-left: auto;
-  padding-right: 40px;
-  margin-top: 40px;
-  max-width: fit-content;
+.top-container {
+  width: 100%;
+  margin-top: 30px;
   display: flex;
+  flex-direction: column;
   column-gap: 10px;
   flex-wrap: wrap;
 }
 
-@media (max-width: 691px) {
+.search_container {
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+}
+
+input {
+  width: 75%;
+  margin-left: 5%;
+}
+
+button {
+  width: fit-content;
+  margin-right: 3%;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.output {
+  width: fit-content;
+  margin: 25px auto;
+
+}
+
+@media (min-width: 422px) and (max-width: 691px) {
   .main-container {
     column-gap: 10px;
   }  
+
 }
 
 @media (max-width: 421px) {
   .main-container {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-container > div {
+    padding: 10px;
+  }
+
+  .main-container > .row-1 {
+    display: none;
+  }
+
+  .row-2 {
+    order: 1;
+  }
+
+  .row-3 {
+    order: 2;
+  }
+
+  .row-4 {
+    order: 3;
+  }
+
+  .row-5 {
+    order: 4;
+  }
+
+  .col {
+    background-color: rgb(217, 30, 50, 0.5);
+  }
+
+  .col:hover {
+    cursor: pointer;
+    background-color: rgb(217, 30, 50, 0.8);
   }
 
 }
