@@ -12,7 +12,7 @@ h1 {
   font-weight: 700;
   font-size: 2.5em;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 30px;
   color: #d91e32;
 }
 
@@ -27,9 +27,9 @@ h1 {
 }
 
 .main-container > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: inline;
+  text-align: center;
+  padding-top: 10%;
 }
 
 .row-1{
@@ -110,6 +110,9 @@ input {
 
 button {
   width: fit-content;
+}
+
+.restart {
   margin-right: 3%;
 }
 
@@ -120,7 +123,14 @@ button:hover {
 .output {
   width: fit-content;
   margin: 25px auto;
+}
 
+mark {
+  background-color: red;
+}
+
+.off {
+  background-color: white;
 }
 
 @media (min-width: 422px) and (max-width: 691px) {
