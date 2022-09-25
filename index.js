@@ -26,7 +26,7 @@ let x;
 
 function checkTheSame(e) {
   cells.forEach((cell) => {
-    if (input.value !== '') {
+    if (input.value !== '' && input.value !== '\.') {
       regExp = new RegExp(input.value, "gi");
       cell.innerHTML = (cell.textContent).replace(regExp, elem);
       title.innerHTML = (title.textContent).replace(regExp, elem);
